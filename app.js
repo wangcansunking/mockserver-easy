@@ -3,12 +3,10 @@
  */
 var express = require('express');
 
-var json = require('./test.json');
-
 var app = express();
 
 app.get('/', function (req, res) {
-    res.json(json)
+    res.json(require('./test.json'))
 });
 
 app.listen(3000, function () {
